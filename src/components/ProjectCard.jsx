@@ -15,13 +15,3 @@ const ProjectCard = ({ title, Description, imageUrl, projectLink }) => {
   );
 };
 export default ProjectCard;
-
-
-// {hover && (
-//   <button
-//     className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-lg font-semibold transition-opacity opacity-0 hover:opacity-100"
-//     onClick={() => window.location.href = projectLink}
-//   >
-//     Go to Website
-//   </button>
-// )}
