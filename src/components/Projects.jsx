@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import Box from "@mui/material/Box";
 
 const projects = [
   {
@@ -54,20 +55,28 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="m-4">
-      <h1 className="text-center my-6 text-5xl">&#8764; Projects</h1>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            Description={project.Description}
-            imageUrl={project.ImageUrl}
-            projectLink={project.projectLink}
-          />
-        ))}
+    <Box
+      sx={{
+        bgcolor: "background.default",
+        color: "text.primary",
+        p: 3,
+      }}
+    >
+      <div className="m-4">
+        <h1 className="text-center my-6 text-5xl">&#8764; Projects</h1>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              Description={project.Description}
+              imageUrl={project.ImageUrl}
+              projectLink={project.projectLink}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </Box>
   );
 };
 
